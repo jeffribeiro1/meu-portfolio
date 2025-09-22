@@ -1,4 +1,4 @@
-markdown
+
 # 🚀 EXERCÍCIO PRÁTICO – Construindo seu Portfólio Responsivo com SASS
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/jeffribeiro1/meu-portfolio)
