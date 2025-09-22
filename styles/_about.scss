@@ -1,0 +1,60 @@
+.about {
+  padding: $spacing-xl 0;
+  background: $light-color;
+  
+  @include respond-to(sm) {
+    padding: $spacing-lg 0;
+  }
+  
+  &-content {
+    @include grid(1, $spacing-lg);
+    text-align: center;
+  }
+  
+  &-text {
+    p {
+      margin-bottom: $spacing-md;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    h3 {
+      margin-bottom: $spacing-md;
+      color: $dark-color;
+    }
+  }
+}
+
+.skills {
+  margin-top: $spacing-md;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill {
+  margin-bottom: $spacing-md;
+  
+  span {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.skill-bar {
+  background: #e0e0e0;
+  height: 8px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, $primary-color, $accent-color);
+  border-radius: $border-radius;
+  width: 0;
+  transition: width 1s ease;
+}

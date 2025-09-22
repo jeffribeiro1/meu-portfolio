@@ -1,0 +1,91 @@
+.contact {
+  padding: $spacing-xl 0;
+  background: $light-color;
+  
+  @include respond-to(sm) {
+    padding: $spacing-lg 0;
+  }
+}
+
+.contact-content {
+  @include grid(2, $spacing-lg);
+  
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info {
+  h3 {
+    margin-bottom: $spacing-sm;
+    color: $dark-color;
+  }
+  
+  p {
+    margin-bottom: $spacing-md;
+    color: $gray-color;
+  }
+}
+
+.contact-details {
+  margin-bottom: $spacing-md;
+}
+
+.contact-item {
+  @include flex(row, flex-start, center);
+  margin-bottom: $spacing-sm;
+  
+  i {
+    color: $primary-color;
+    margin-right: $spacing-sm;
+    width: 20px;
+  }
+  
+  span {
+    color: $dark-color;
+  }
+}
+
+.contact-form {
+  @include flex(column, flex-start, stretch);
+  gap: $spacing-md;
+  
+  input,
+  textarea {
+    padding: $spacing-sm;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    font-family: inherit;
+    font-size: inherit;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+  
+  button {
+    align-self: flex-start;
+  }
+}
+
+.social-links {
+  @include flex(row, flex-start, center);
+  gap: $spacing-sm;
+  
+  a {
+    @include flex(row, center, center);
+    width: 40px;
+    height: 40px;
+    background: $primary-color;
+    color: $white-color;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: $transition-normal;
+    
+    &:hover {
+      transform: translateY(-2px);
+      background: darken($primary-color, 10%);
+    }
+  }
+}

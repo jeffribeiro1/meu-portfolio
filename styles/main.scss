@@ -1,0 +1,58 @@
+// Importações
+@use'variables';
+@use 'mixins';
+@use 'header';
+@use 'hero';
+@use 'about';
+@use 'projects';
+@use 'contact';
+@use 'footer';
+
+// Reset e estilos base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $dark-color;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.section-title {
+  @include section-title;
+}
+
+// Estilos de botões
+.btn {
+  @include button;
+  
+  &-primary {
+    @include button($primary-color, $white-color, darken($primary-color, 10%));
+  }
+  
+  &-secondary {
+    @include button(transparent, $primary-color, $primary-color);
+    border: 2px solid $primary-color;
+    
+    &:hover {
+      color: $white-color;
+    }
+  }
+  
+  &-small {
+    padding: $spacing-xs $spacing-sm;
+    font-size: 0.9rem;
+    @include button($primary-color, $white-color, darken($primary-color, 10%));
+  }
+}

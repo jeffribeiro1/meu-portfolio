@@ -1,0 +1,58 @@
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  min-height: 100vh;
+  padding-top: 80px;
+  @include flex(row, space-between, center);
+  
+  @include respond-to(md) {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-lg;
+  }
+  
+  &-content {
+    flex: 1;
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: $spacing-sm;
+      
+      @include respond-to(sm) {
+        font-size: 2.5rem;
+      }
+    }
+    
+    p {
+      font-size: 1.5rem;
+      color: $gray-color;
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  &-image {
+    flex: 1;
+    text-align: center;
+    
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+    }
+  }
+  
+  &-buttons {
+    @include flex(row, flex-start, center);
+    gap: $spacing-sm;
+    
+    @include respond-to(xs) {
+      flex-direction: column;
+    }
+  }
+}
+
+.highlight {
+  color: $primary-color;
+}
