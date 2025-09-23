@@ -7,8 +7,6 @@
 
 Portfólio pessoal desenvolvido para showcase de projetos e habilidades como Desenvolvedor Full Stack. Design moderno, responsivo e com performance otimizada.
 
-**🔗 [Acesse o Portfólio Online](https://jeffribeiro1.github.io/portfolio/)**
-
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
